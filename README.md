@@ -1,4 +1,3 @@
-(The file `d:\Machine_Learning\ML_Assignment_2\README.md` exists, but is empty)
 # ML Assignment 2 — Bank Marketing Classification
 
 ## Problem statement
