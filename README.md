@@ -82,13 +82,3 @@ All metrics computed on a held-out test split (20%). Values rounded.
 - `models/` — Individual model scripts and JSON results for each model.
 - `data/` — Contains `bank-full.csv` used in experiments.
 
-## Deployment
-
-Deploy to Streamlit Community Cloud: create a GitHub repo with this code, then follow Streamlit Cloud's "New app" flow and select `app.py` as the entrypoint.
-
-## Submission checklist
-
-- Include this README content in the final PDF.
-- Provide GitHub repository link and Streamlit app link in the PDF.
-- Include a screenshot from BITS Virtual Lab as proof of execution.
-
