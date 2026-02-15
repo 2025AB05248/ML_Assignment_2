@@ -64,6 +64,17 @@ All metrics computed on a held-out test split (20%). Values rounded.
 - Logistic Regression and Random Forest achieved high accuracy, but XGBoost had the best MCC and F1.
 - Decision Tree had lower AUC compared to ensembles, indicating overfitting / lower probability calibration.
 
+**Model-specific observations**
+
+| ML Model Name | Observation about model performance |
+|---|---|
+| Logistic Regression | High accuracy (0.9016) and AUC (0.9054). Moderate precision (0.6474) but low recall (0.3488) — the model is conservative and favors the negative class; consider threshold tuning or class weighting to improve recall. |
+| Decision Tree | Lower accuracy (0.8777) and AUC (0.7135). Precision and recall are modest (~0.48–0.50), suggesting limited generalization and possible overfitting; benefits from pruning or deeper ensemble approaches. |
+| k-NN | Good accuracy (0.8961) and AUC (0.8373) but low recall (0.3554) with moderate precision (0.5931). Performance sensitive to feature scaling and choice of `k`; may under-represent minority class. |
+| Naive Bayes | Lower accuracy (0.8639) and AUC (0.8088). Shows higher recall (0.4877) than some others but lower precision (0.4282) — useful for fast baseline predictions but affected by conditional independence assumptions. |
+| Random Forest (Ensemble) | Strong accuracy (0.9045) and high AUC (0.9272). High precision (0.6554) with moderate recall (0.3866) — robust ensemble performance, good default for balanced overall metrics. |
+| XGBoost (Ensemble) | Best overall trade-off: highest AUC (0.9291), top accuracy (0.9080), and best MCC (0.5149). Balanced precision (0.6348) and recall (0.5028) yield the highest F1 (0.5612); recommended when both ranking and balanced classification are desired. |
+
 ## Repository contents
 
 - `app.py` — Streamlit app and console fallback for dataset upload, model selection, training, and metrics display.
